@@ -1,0 +1,151 @@
+.app-cont{
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app-cont-center{
+  width: 95%;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+}
+
+.container {
+  font-family: "Quicksand", sans-serif;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  gap: 2rem;
+}
+button{
+  // cursor: pointer;
+  // padding:0.5rem 1.5rem;
+}
+
+.login,
+.home {
+  // width: 200px;
+  // height: 200px;
+  // padding: 20px;
+  // position: absolute;
+  // top: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  // margin: auto;
+  // border: 1px solid lightgray;
+  // border-radius: 10px;
+}
+
+form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.formTitle {
+  color: teal;
+  font-weight: bold;
+}
+
+input {
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+input:focus {
+  outline: none;
+}
+
+.submitButton {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+}
+
+.home {
+  // width: 300px;
+  // height: 250px;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: space-around;
+  // text-align: center;
+}
+
+.deleteButton {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff0f1;
+  color: #d95087;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #fad4d7;
+}
+
+.error {
+  font-size: 12px;
+  color: crimson;
+}
+
+.success {
+  font-size: 12px;
+  color: green;
+}
+
+
+
+
+
+
+
+
+$breakpoints: (
+  mobile : 620px, 
+  tablet : 768px, 
+  xl-tablet: 900px,
+  small-desktop: 1000px,
+  custom-825: 825px,
+  1275px: 1275px,
+  1015px: 1015px
+);
+
+//  mixin to print out media queries (based on map keys passed) 
+@mixin media($keys...){
+  @each $key in $keys { 
+    @media (max-width: map-get($breakpoints, $key)){
+      @content
+    } 
+  }
+}
+
+.sample-className {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  
+    //  pass the key(s) of the media queries you want to print  
+    @include media(mobile, tablet, desktop){
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+
+//   @import "../../app.scss";
+
+
+
