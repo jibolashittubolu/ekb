@@ -1,26 +1,26 @@
 import './sessions.scss'
-import home1 from '../../../assets/imgs/Ekaabo Website Layout home 1.jpg'
+import sessions_img from '../../../assets/imgs/Ekaabo Website Layout sessions.jpg'
+import EkbHomeComponent from '../../../components/reusable/ekbHomeComponent/EkbHomeComponent'
 
 const Sessions = () => {
+  const hoc_content = 
+  <div>
+    <h2>PANEL SESSION 1: Destination Marketing and Management</h2>
+    <p>The marketing of a destination necessitates strategic planning, decision making, and
+    organization. Effective positioning will result in a strong brand that develops an emotional
+    and productive two-way relationship. This panel session is to focus on utilising destination
+    branding and content marketing for sustainable growth and competitive advantage within
+    the tourism and hospitality industry, including tools and techniques for travel branding and
+    best practices for better tourism management strategies.</p>
+    <h2>PANEL SESSION 2: Hotel Revenue & Distribution</h2>
+  </div>
+  
   return (
-    <div className='hst2'>
-    <div className='hst2-yellow-head'>SESSIONS</div>
-    <div className='hst2-body'>
-      <div className='hst1-left'>
-        <img className='hst1-img' src={home1} alt='' />
-      </div>
-      <div className='hst1-right'>
-        <div className='hst1-right-top'>
-          <div  className='hst1-right-top1'>TOURISM</div>
-          <p className='hst1-right-top2'>The tourism and hospitality industry in Oyo State has huge potential yet unexplored, which if fully supported by all the stakeholders, can contribute signicantly to the economic diversification that will definitely lead to economic growth, reducing poverty, improving natural resource management, conserving biodiversity, employment generation, empowerment, community development, among others 
-          </p>
-          </div >
-          <div className='hst1-right-bottom'>
-            <button>READ MORE</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <EkbHomeComponent 
+    hoc_content={hoc_content} 
+    heading="S E S S I O N S"
+    img_src={sessions_img}
+    img_alt="sessions"/>
   )
 }
 

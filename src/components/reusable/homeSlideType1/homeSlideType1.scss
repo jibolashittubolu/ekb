@@ -1,19 +1,45 @@
 @import "../../../app.scss";
 
+.mobile{
+    display: none !important;
+}
+@include media(mobile){
+    .not-mobile{
+        display: none !important;
+        // background-color: red;
+    }
+    .mobile{
+        display: block !important;
+    }
+}
+
+
+
+
 .hst1{
     width: 100%;
     height: 100%;
     position: relative;
-    background-color: black;
+    // background-color: black;
     display: flex;
+    height: 45vh;
+}
+
+@include media(1275px){
+    .hst1{
+        flex-direction: column;
+        height: max-content;
+        align-items: center;
+        justify-content: center;
+        // padding: 0;
+    }
 }
 
 @include media(mobile){
     .hst1{
-        flex-direction: column;
+        // height: 35vh;
     }
 }
-
 
 .hst1-left{
     flex: 2;
@@ -34,13 +60,13 @@
 .hst1-right{
     flex: 3;
     height: 100%;
-    // background-color: lime;
     background-color: white;
+    // background-color: lime;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 0rem 3rem;
+    padding: 0rem 2.5rem;
 
 }
 @include media(mobile){
@@ -49,6 +75,13 @@
         text-align: center;
     }
 }
+
+
+
+.hst1-right-mobile{
+
+}
+
 
 .hst1-right-top1{
     text-align: center;
@@ -75,3 +108,4 @@
     border-radius: 1rem;
     cursor: pointer;
 }
+

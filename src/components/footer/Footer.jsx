@@ -1,15 +1,11 @@
 import './footer.scss'
-import { Facebook , Twitter, Pinterest, Instagram, Search, WhatsApp, Phone} from '@mui/icons-material';
-import { useNavigate } from 'react-router-dom';
-import logo from '../../assets/images/logo.jpg'
-import logo_2 from '../../assets/images/logo_2.png'
+import { Facebook , Twitter, Pinterest, Instagram, Search, WhatsApp, Phone, LocationCityOutlined, LocationOn, MailOutline, Call} from '@mui/icons-material';
 import useTimer from '../../hooks/useTimer';
 
-import { DIV, SECTION, SPAN, P, H1, H2, A } from '../../utils/StyledComps'
-import { display } from '@mui/system';
-import splash_screen_png from '../../assets/imgs/splash_screen_png.png'
-import { useEffect, useState } from 'react';
+import splash_screen_png from '../../assets/imgs/ekaabo.jpg'
 
+import geomeridien from '../../assets/imgs/geomeridien.jpg'
+import oysg from '../../assets/imgs/oysg.jpg'
 
 const Footer1 = () => {
 
@@ -73,7 +69,8 @@ const Footer1 = () => {
             <a 
             target="_blank" rel="noreferrer" href="tel:+2347034701104" className='footer-middle1-i1'>
               {/* <span className='footer-middle1-i1' > */}
-                <span><Phone/> </span>
+                <span>
+                  <Phone/> </span>
                 <span className='not-mobile'>REQUEST</span>
                   <span className='not-mobile'>A CALL BACK</span>
               {/* </span> */}
@@ -112,8 +109,12 @@ const Footer1 = () => {
           <div className='footer-middle1-i fm1i-4'>
             <div className='footer-middle1-i4'>
               {/* <span>EVENT ORGANIZER:</span> */}
-              <span>Geomeridien </span>
-              <span>International Ltd</span>
+              <span>
+                <img className='fm1i4-img' src={geomeridien} alt=''/>
+              </span>
+              <span className='fm1i4-img'>
+                <img src={oysg} alt='' />
+              </span>
               {/* <span>Supported By</span> */}
               {/* <span>OYSG</span> */}
             </div>
@@ -132,23 +133,60 @@ const Footer1 = () => {
       </div>
       <div className='footer-middle2'>
         <div className='footer-middle2-cont'>
-          <span style={{textDecoration: 'underline'}}>CONTACT US</span>
-          <span>info@ekaaboafrica.com</span>
-          <li>
+          <span style={{textDecoration: 'underline'}}>CONTACT US</span>            
+          <a
+            className='footer-middle2-icon'
+            href='mailto:info@ekaaboafrica.com' target="_blank" rel="noreferrer">
+            <span> <MailOutline fontSize='1rem' className="footer-icon-spss" /> info@ekaaboafrica.com</span>
+          </a>
+          <div className='footer-middle2-icon' >
+            <LocationOn fontSize='1rem' className="footer-icon-spss"/>
             Room 6, OYTHPD, Oyo State Tourism Board,
             Bale Shittu, Agodi Gate
-          </li>
-          <li>
+          </div>
+          <div className='footer-middle2-icon' >
+            <LocationOn fontSize='1rem' className="footer-icon-spss"/>
             ICT Building, National Museum, Aleshinloye, Ibadan
-          </li>
-          <span>07034701104, 09129906500</span>
-          <span className='icons-in-contact'>
-                        <Instagram className="topLeftIcon"/>
-                        <Facebook className="topLeftIcon"/>
-                        <Twitter className="topLeftIcon"/>
-                        <WhatsApp />
+          </div>
+          <span className='contact-tel-lines'>
+          <a
+            className='footer-middle2-icon'
+            href='tel:+2347034701104' target="_blank" rel="noreferrer">
+            <span> <Call fontSize='1rem' className="footer-icon-spss"/> +2347034701104  ,</span>
+          </a>
+          <a
+            className='footer-middle2-icon'
+            href='tel:+2349129906500' target="_blank" rel="noreferrer">
+            <span>+2349129906500</span>
+          </a>
           </span>
-          <span>info@ekaaboafrica.com</span>
+          <span className='icons-in-contact'>
+            <a
+            className='footer-middle2-icon'
+            href='https://instagram.com' target="_blank" rel="noreferrer">
+                        <Instagram />
+            </a>
+            <a
+            className='footer-middle2-icon'
+            href='https://facebook.com' target="_blank" rel="noreferrer">
+            <Facebook className="topLeftIcon"/>
+            </a>
+            <a 
+            className='footer-middle2-icon'
+            href='https://twitter.com' target="_blank" rel="noreferrer">
+                        <Twitter className="topLeftIcon"/>
+            </a>
+            <a 
+            className='footer-middle2-icon'
+            href='https://wa.me/+2347034701104' target="_blank" rel="noreferrer">
+                <span ><WhatsApp /></span>
+            </a>
+          </span>
+          <a
+            className='footer-middle2-icon'
+            href='mailto:info@ekaaboafrica.com' target="_blank" rel="noreferrer">
+            <span>info@ekaaboafrica.com</span>
+          </a>
         </div>
       </div>
       <div className='footer-bottom'>ALL RIGHTS RESERVED EKAABO 2023</div>

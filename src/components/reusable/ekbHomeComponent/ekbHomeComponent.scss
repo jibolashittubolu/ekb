@@ -1,0 +1,126 @@
+@import "../../../app.scss";
+
+.ekb-home-component{
+    height: 40vh;
+    margin: 1rem 0 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+@include media(mobile){
+    .ekb-home-component{
+        height: 55vh;
+    }
+}
+
+.ekb-hc-head{
+    height: 13%;
+    background-color: pink;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    // width: 100vw;
+    // left: 0;
+    // right: 0;
+    position: relative;
+    background-color: #f8c013;
+    width: 100%;
+}
+@include media(mobile){
+    .ekb-hc-head{
+        height: 8%;
+    }
+}
+
+.ekb-hc-body{
+    height: 87%;
+    display: flex;
+    width: 95%;
+}
+@include media(mobile){
+    .ekb-hc-body{
+        // flex-direction: column;
+        height: 92%;
+        display: block;
+    }
+}
+
+.ekb-hc-body-left{
+    flex: 1;
+}
+@include media(mobile){
+    .ekb-hc-body-left{
+        // max-height: 50%;
+        height: 50%;
+        // flex: 2;
+        //flex has no effect parent is display block
+    }
+}
+
+.ekb-hc-body-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+// .ekb-hc-body-img{
+//     height: 10%;
+//     width: 100%;
+//     object-fit: cover;
+// }
+
+.ekb-hc-body-right{
+    flex: 2;
+    // background-color: pink;
+    position: relative;
+    // overflow-y: hidden;
+    overflow: hidden;
+    padding: 0.5rem 0 2.5rem 1rem;
+}
+@include media(mobile){
+    .ekb-hc-body-right{
+        // max-height: ;
+        // flex: 5
+        // flex doesnt work for height
+        // height: 10%;
+        // height: 3rem;
+        // flex: 5;
+        max-height: 40%;
+        padding: 0.5rem 0 3rem 1rem;
+
+        //this max-height 40% is a partial fix
+        //it should be 50%
+        // display: none;
+        // background-color: pink;
+    }
+}
+
+.ekb-hc-body-right-content{
+    width: 100%;
+    // background-color: yellow;
+    // background-color: #f8c013;
+}
+
+.ekb-hc-body-read-more{
+    position: absolute;
+    width: 100%;
+    background-color: lime;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    background-color: white;
+}
+
+.ekb-hc-body-read-more > button{
+    padding: 0.45rem 0.6rem 0.45rem 0.6rem;
+    border: none;
+    color: white;
+    background-color: #451701;
+    cursor: pointer;
+}

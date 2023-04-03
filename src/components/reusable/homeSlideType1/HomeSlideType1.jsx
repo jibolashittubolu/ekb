@@ -14,7 +14,7 @@ const HomeSlideType1 = ({src, alt, image_position, heading, text, hocThing}) => 
     <div 
     className='home-slide-item hst1'>
       <div 
-      className='hst1-left'
+      className='hst1-left not-mobile'
       style={{
         display: image_position === 'left' ? '' : 'none',
         flex: image_position === 'left' ? 2 : ''
@@ -22,9 +22,10 @@ const HomeSlideType1 = ({src, alt, image_position, heading, text, hocThing}) => 
         <img className='hst1-img' src={src} alt='' />
       </div>
       <div 
-      className='hst1-right'
+      className='hst1-right not-mobile'
       style={{
-        flex: image_position === 'left' ? 3 : 2
+        flex: image_position === 'left' ? 3 : 2,
+        // padding: image_position === 'right' ? '0rem 5rem 0rem 0rem': '0rem 2.5rem'
       }}>
         <div className='hst1-right-top'>
           <div  className='hst1-right-top1'>{heading}</div>
@@ -35,15 +36,32 @@ const HomeSlideType1 = ({src, alt, image_position, heading, text, hocThing}) => 
           <button>LEARN MORE</button>
         </div>
       </div>
-
       <div 
-      className='hst1-left'
+      className='hst1-left not-mobile'
       style={{
         display: image_position === "left" ? 'none': '',
-        flex: image_position === 'right' ? 3 : ''
+        flex: image_position === 'right' ? 4 : ''
       }}>
         <img className='hst1-img' src={src} alt='' />
       </div>
+
+      <div 
+      className='hst1-left mobile'
+      >
+        <img className='hst1-img' src={src} alt='' />
+      </div>
+      <div 
+      className='hst1-right mobile'>
+        <div className='hst1-right-top'>
+          <div  className='hst1-right-top1'>{heading}</div>
+          <p className='hst1-right-top2'>{text} 
+          </p>
+        </div >
+        <div className='hst1-right-bottom'>
+          <button>LEARN MORE</button>
+        </div>
+      </div>
+
 
 
     </div>

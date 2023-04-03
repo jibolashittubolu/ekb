@@ -1,7 +1,5 @@
 import './home.scss'
-import ekaabo_poster from '../../assets/images/ekaabo_poster.png'
-import logo_trans from '../../assets/images/logo_trans.png'
-import splash_screen from '../../assets/imgs/splash_screen.jpg'
+
 import home1 from '../../assets/imgs/Ekaabo Website Layout home 1.jpg'
 import home2 from '../../assets/imgs/Ekaabo Website Layout home 2.jpg'
 import home3 from '../../assets/imgs/Ekaabo Website Layout home 3.jpg'
@@ -10,6 +8,9 @@ import home5 from '../../assets/imgs/Ekaabo Website Layout home 5.jpg'
 import home6 from '../../assets/imgs/Culture image.jpg'
 import { useEffect, useState } from 'react'
 import HomeSlideType1 from '../../components/reusable/homeSlideType1/HomeSlideType1'
+import HomeSlideType2 from '../../components/reusable/ekbHomeComponent/EkbHomeComponent'
+import { Link } from 'react-router-dom'
+import { ROUTER_LINKS } from '../../utils/ROUTER_LINKS'
 
 
 const Home = () => {
@@ -22,9 +23,13 @@ const Home = () => {
         <div className='hstc-line1'>THE MEGA TRADE SHOW IS HERE!</div>
         <div className='hstc-line2'>EKAABO TRADE SHOW 2023</div>
         <div className='hstc-line3'>
-          <span>EXHIBIT</span>
-          <span>ATTEND</span>
-          <span>SPONSOR</span>
+          <Link
+          className='link'
+          to={ROUTER_LINKS.exhibit.exhibitors_info}>aaaEXHIBIT</Link>
+          <Link className='link'
+          to={ROUTER_LINKS.attend.register_to_attend}>ATTEND</Link>
+          <Link className='link'
+          to={ROUTER_LINKS.sponsors.be_a_sponsor}>SPONSOR</Link>
         </div>
       </div>
     </div>,
@@ -79,58 +84,41 @@ const Home = () => {
   }
   
   return (
-    <div className='home'>
-      <div className='bg-img-home'>
-        <div className='home-bg-img-cont'>
-          {/* {slides[slideNum]} */}
-
-          <HomeSlideType1 src={home3} image_position="right" heading="HOSPITALITY" text="Tourism and hospitality industry is regarded as a bedrock of any nation as it can solve various issues with ease while profering sustainable solutions to communities or states that decide to take advantage of the sector. Given the low-level skills and the relatively short-lead period for training and skills acquisition,"/>
-          <HomeSlideType1 src={home4} image_position="left"  heading="TOURISM" text="The tourism and hospitality industry in Oyo State has huge potential yet unexplored, which if fully supported by all the stakeholders, can contribute significantly to the economic diversification that will definitely lead to economic growth, reducing poverty, improving natural resource management, conserving biodiversity, employment generation, empowerment, community development, among others."/>
-          <HomeSlideType1 src={home5} image_position="right" heading="TRADE" text="The tourism and hospitality industry in Oyo State has huge potential yet unexplored, which if fully supported by all the stakeholders, can contribute signicantly to the economic diversification that will definitely lead to economic growth, reducing poverty, improving natural resource management, conserving biodiversity, employment generation, empowerment, community development, among others."/>
-          <HomeSlideType1 src={home6} image_position="left" heading="CULTURE" text="The tourism and hospitality industry in Oyo State has huge potential yet unexplored, which if fully supported by all the stakeholders, can contribute signicantly to the economic diversification that will definitely lead to economic growth, reducing poverty, improving natural resource management, conserving biodiversity, employment generation, empowerment, community development, among others."/>
-
-
-          {/* <div className='home-slide-item'>
-            <img className='home-bg-img' src={home1} alt='' />
-            <div className='home-slide-text-cont'>
-              <div className='hstc-line1'>THE MEGA TRADE SHOW IS HERE!</div>
-              <div className='hstc-line2'>EKAABO TRADE SHOW 2023</div>
-              <div className='hstc-line3'>
-                <span>EXHIBIT</span>
-                <span>ATTEND</span>
-                <span>SPONSOR</span>
-              </div>
-            </div>
-          </div> */}
-          {/* <div className='home-slide-item'>
-            <img className='home-bg-img' src={home1} alt='' />
-            <div className='home-slide-text-cont'>
-              <div className='hstc-line1'>HOSTPITALITY . CULTURE . TOURISM . TRADE</div>
-              <div className='hstc-line2'>EKAABO TRADE SHOW 2023</div>
-            </div>
-          </div> */}
-          {/* <HomeSlideType1 src={home1} /> */}
-
-          {/* <div className='hst2'>
-            <div className='hst2-yellow-head'>SESSIONS</div>
-            <div className='hst2-body'>
-              <div className='hst1-left'>
-                <img className='hst1-img' src={home4} alt='' />
-              </div>
-              <div className='hst1-right'>
-                <div className='hst1-right-top'>
-                  <div  className='hst1-right-top1'>TOURISM</div>
-                  <p className='hst1-right-top2'>The tourism and hospitality industry in Oyo State has huge potential yet unexplored, which if fully supported by all the stakeholders, can contribute signicantly to the economic diversification that will definitely lead to economic growth, reducing poverty, improving natural resource management, conserving biodiversity, employment generation, empowerment, community development, among others 
-                  </p>
-                </div >
-                <div className='hst1-right-bottom'>
-                  <button>READ MORE</button>
+          <div className='home'>
+            <div className='bg-img-home'>
+              <div className='home-bg-img-cont'>
+                {/* {slides[slideNum]} */}
+                <div className='home-slide-item'>
+                  <img className='home-bg-img' src={home1} alt='' />
+                  <div className='home-slide-text-cont'>
+                    <div className='hstc-line1'>THE MEGA TRADE SHOW IS HERE!</div>
+                    <div className='hstc-line2'>EKAABO TRADE SHOW 2023</div>
+                    <div className='hstc-line3'>
+                      <Link
+                      className='link'
+                      to={ROUTER_LINKS.exhibit.exhibitors_info}>EXHIBIT</Link>
+                      <Link className='link'
+                      to={ROUTER_LINKS.attend.register_to_attend}>ATTEND</Link>
+                      <Link className='link'
+                      to={ROUTER_LINKS.sponsors.be_a_sponsor}>SPONSOR</Link>
+                    </div>
+                  </div>
                 </div>
-              </div>
+                <div className='home-slide-item'>
+                  <img className='home-bg-img' src={home2} alt='' />
+                  <div className='home-slide-text-cont'>
+                    <div className='hstc-line1'>HOSPITALITY . CULTURE . TOURISM . TRADE</div>
+                    <div className='hstc-line2'>EKAABO TRADE SHOW 2023</div>
+                  </div>
+                </div>
+
+                <HomeSlideType1 src={home3} image_position="right" heading="HOSPITALITY" text="Tourism and hospitality industry is regarded as a bedrock of any nation as it can solve various issues with ease while profering sustainable solutions to communities or states that decide to take advantage of the sector. Given the low-level skills and the relatively short-lead period for training and skills acquisition,"/>
+                <HomeSlideType1 src={home4} image_position="left"  heading="TOURISM" text="The tourism and hospitality industry in Oyo State has huge potential yet unexplored, which if fully supported by all the stakeholders, can contribute significantly to the economic diversification that will definitely lead to economic growth, reducing poverty, improving natural resource management, conserving biodiversity, employment generation, empowerment, community development, among others."/>
+                <HomeSlideType1 src={home5} image_position="right" heading="TRADE" text="The tourism and hospitality industry in Oyo State has huge potential yet unexplored, which if fully supported by all the stakeholders, can contribute signicantly to the economic diversification that will definitely lead to economic growth, reducing poverty, improving natural resource management, conserving biodiversity, employment generation, empowerment, community development, among others."/>
+                <HomeSlideType1 src={home6} image_position="left" heading="CULTURE" text="The tourism and hospitality industry in Oyo State has huge potential yet unexplored, which if fully supported by all the stakeholders, can contribute signicantly to the economic diversification that will definitely lead to economic growth, reducing poverty, improving natural resource management, conserving biodiversity, employment generation, empowerment, community development, among others."/>
             </div>
-          </div> */}
-        </div>
-      </div>
+          </div>
+
       <div className='slide-dots'>
         {
         slides.map((slide, index) => (
@@ -148,6 +136,14 @@ const Home = () => {
       
     </div>
   )
+}
+
+
+
+const Home2 = () => {
+  return (
+    <HomeSlideType2 />
+    )
 }
 
 export default Home

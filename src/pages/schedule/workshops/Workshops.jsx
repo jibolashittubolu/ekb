@@ -1,23 +1,24 @@
-import './schedule.scss'
-import ekaabo_poster from '../../assets/images/ekaabo_poster.png'
-import logo_trans from '../../assets/images/logo_trans.png'
+import './workshops.scss'
+import workshops_img from '../../../assets/imgs/Ekaabo Website Layout workshops.jpg'
+import EkbHomeComponent from '../../../components/reusable/ekbHomeComponent/EkbHomeComponent'
 
-const Schedule = () => {
+const Workshops = () => {
+  const hoc_content = 
+  <div>
+    <h2>FOOD WORKSHOPS</h2>
+    <p>There will be various food workshops at the Ekaabo Trade Show 2023. A track of food and kitchen-based workshops made available for interested participants to see demonstrations
+    and taste, learn tips and tricks for increasing revenue, table setup. Various seasoned practitioners will be on ground at the event to take attendees on all kinds of food workshops. Other Special Workshops There will also be various other specialized
+    workshops in line with tourism, hospitality and culture at Ekaabo Trade Show 2023</p>
+    <h2>BITE SIZED WORKSHOPS</h2>
+  </div>
+  
   return (
-    <div className='schedule'>
-      <div className='ekaabo-poster-img-cont'>
-        <img className='ekaabo-poster-img' src={logo_trans} alt='poster' />
-
-      </div>
-      <div className='exhibit-horizontal-line'>
-          <span></span>
-          <div className='exhibit-hr-line'></div>
-          <span></span>
-      </div>
-      <h1>A detailed description of the daily schedule of the event will be released shortly.</h1>
-        <h2>You can <a className='to-be-notified' href='/notify'>click here</a> to get notified as soon as the schedule is made available.</h2>
-    </div>
+    <EkbHomeComponent 
+    hoc_content={hoc_content} 
+    heading="W O R K S H O P S"
+    img_src={workshops_img}
+    img_alt="workshops"/>
   )
 }
 
-export default Schedule
+export default Workshops
