@@ -26,6 +26,7 @@ contact us via our contact Info.</div>
     hoc_content={hoc_content} 
     heading="FAQ"
     img_src={faq_img}
+    // img_src={`/${faq_img}`}
     img_alt="list of FAQ"/>
   )
 }

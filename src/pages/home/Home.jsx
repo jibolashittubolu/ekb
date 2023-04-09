@@ -88,7 +88,7 @@ const Home = () => {
             <div className='bg-img-home'>
               <div className='home-bg-img-cont'>
                 {/* {slides[slideNum]} */}
-                <div className='home-slide-item'>
+                <div className='home-slide-item first-hsi'>
                   <img className='home-bg-img' src={home1} alt='' />
                   <div className='home-slide-text-cont'>
                     <div className='hstc-line1'>THE MEGA TRADE SHOW IS HERE!</div>

@@ -52,7 +52,7 @@ const TopBar1 = () => {
     }
 
     const [mobileMenu, setMobileMenu] = useState({
-        dropDownOpen: !true,
+        dropDownOpen: true,
         // home: true,
         schedule: false,
         // book_a_stand: false,
@@ -327,7 +327,7 @@ const TopBar1 = () => {
                     </div>
 
                     <div 
-                    className='mic-item mobile-menu-bookstand' onClick={()=> navigateMobileMenu(ROUTER_LINKS.schedule.book_a_stand.stand_form)}>
+                    className='mic-item mobile-menu-bookstand' onClick={()=> navigateMobileMenu(ROUTER_LINKS.book_a_stand.stand_form)}>
                         <span 
                         onClick={()=> modifyMobileMenu('schedule')}
                         className='mimmh-cont'>
@@ -443,6 +443,23 @@ const TopBar1 = () => {
                                 <span className='mimmh-icon'><LiveHelp fontSize="24" /></span>
                                 <span>FAQ</span>    
                             </span>
+                            {/* <span><ArrowDropDown/></span> */}
+                        </span>
+                    </div>
+
+                    <div 
+                    className='mic-item topbar-mimic' 
+                    onClick={()=> navigateMobileMenu(ROUTER_LINKS.faq.list_of_faq)}>
+                        <span 
+                        onClick={()=> modifyMobileMenu('schedule')}
+                        className='mimmh-cont'>
+                            {/* <span>
+                                <span className='mimmh-icon'><LiveHelp fontSize="24" /></span>
+                                <span>FAQ</span>    
+                            </span> */}
+                            <li>Over 250 Exhibitors From Across The World</li>
+                            <li>Over 5000 Attendees From Across The World</li>
+                            <li>Culture Tourism. Hospitality. Trade</li>
                             {/* <span><ArrowDropDown/></span> */}
                         </span>
                     </div>
